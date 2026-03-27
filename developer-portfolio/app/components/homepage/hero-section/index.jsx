@@ -101,7 +101,7 @@ function HeroSection() {
             <code className="font-mono text-xs md:text-sm lg:text-base">
               <div className="blink">
                 <span className="mr-2 text-pink-500">const</span>
-                <span className="mr-2 text-white">coder</span>
+                <span className="mr-2 text-white">developer</span>
                 <span className="mr-2 text-pink-500">=</span>
                 <span className="text-gray-400">{'{'}</span>
               </div>
@@ -111,27 +111,32 @@ function HeroSection() {
                 <span className="text-amber-300">Aayan Ahmed</span>
                 <span className="text-gray-400">{`',`}</span>
               </div>
+              <div>
+                <span className="ml-4 lg:ml-8 mr-2 text-white">role:</span>
+                <span className="text-gray-400">{`'`}</span>
+                <span className="text-amber-300">Python Backend Developer</span>
+                <span className="text-gray-400">{`',`}</span>
+              </div>
               <div className="ml-4 lg:ml-8 mr-2">
-                <span className=" text-white">skills:</span>
-                <span className="text-gray-400">{`['`}</span>
-                <span className="text-amber-300">React</span>
-                <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">NextJS</span>
-                <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">Redux</span>
-                <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">Express</span>
-                <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">NestJS</span>
-                <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">MySql</span>
-                <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">MongoDB</span>
-                <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">Docker</span>
-                <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">AWS</span>
-                <span className="text-gray-400">{"'],"}</span>
+                <span className="text-white">skills:</span>
+                <span className="text-gray-400">{`[`}</span>
+              </div>
+              <div className="ml-8 lg:ml-16">
+                {[
+                  'Python', 'FastAPI', 'MongoDB',
+                  'Async Programming', 'REST APIs',
+                  'Web Scraping', 'Automation',
+                  'AI Agents (learning)',
+                ].map((skill, i, arr) => (
+                  <span key={skill}>
+                    <span className="text-gray-400">{`'`}</span>
+                    <span className="text-amber-300">{skill}</span>
+                    <span className="text-gray-400">{i < arr.length - 1 ? `',` : `'`}</span>
+                  </span>
+                ))}
+              </div>
+              <div>
+                <span className="ml-4 lg:ml-8 text-gray-400">{`],`}</span>
               </div>
               <div>
                 <span className="ml-4 lg:ml-8 mr-2 text-white">hardWorker:</span>
@@ -147,6 +152,12 @@ function HeroSection() {
                 <span className="ml-4 lg:ml-8 mr-2 text-white">problemSolver:</span>
                 <span className="text-orange-400">true</span>
                 <span className="text-gray-400">,</span>
+              </div>
+              <div>
+                <span className="ml-4 lg:ml-8 mr-2 text-white">goal:</span>
+                <span className="text-gray-400">{`'`}</span>
+                <span className="text-amber-300">Build multi-agent AI systems</span>
+                <span className="text-gray-400">{`',`}</span>
               </div>
               <div>
                 <span className="ml-4 lg:ml-8 mr-2 text-green-400">hireable:</span>
