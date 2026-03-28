@@ -82,6 +82,13 @@ import kubernetes from '../app/assets/svg/skills/kubernetes.svg'
 import linux from '../app/assets/svg/skills/linux.svg'
 import sqlalchemy from '../app/assets/svg/skills/sqlalchemy.svg'
 import fastapi from '../app/assets/svg/skills/fastapi.svg'
+import nodejs from '../app/assets/svg/skills/nodejs.svg'
+import express from '../app/assets/svg/skills/express.png'
+import mcp from '../app/assets/svg/skills/mcp.svg'
+import n8n from '../app/assets/svg/skills/n8n.svg'
+import beautifulsoup from '../app/assets/svg/skills/blender.svg'
+import requests from '../app/assets/svg/skills/requests.svg'
+import pymongo from '../app/assets/svg/skills/pymongo.svg'
 
 
 
@@ -120,6 +127,16 @@ export const skillsImage = (skill) => {
       return typescript;
     case 'vue':
       return vue;
+    case 'mcp — model context protocol (learning)':
+      return mcp;
+    case 'n8n (automation)':
+      return n8n;
+    case 'beautifulsoup':
+      return beautifulsoup;
+    case 'requests':
+      return requests;
+    case 'pymongo':
+      return pymongo;
     case 'bootstrap':
       return bootstrap;
     case 'bulma':
@@ -132,6 +149,10 @@ export const skillsImage = (skill) => {
       return memsql;
     case 'mongodb':
       return mongoDB;
+    case 'nodejs':
+      return nodejs;
+    case 'express':
+      return express;
     case 'mysql':
       return mysql;
     case 'postgresql':

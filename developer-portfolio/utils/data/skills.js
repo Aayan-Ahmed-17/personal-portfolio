@@ -30,7 +30,7 @@ export const skillsData = [
   // SECONDARY — mention but don't feature heavily
   'JavaScript',
   'React',
-  'Node.js',
+  'Nodejs',
   'Express',
   'Git',
   'HTML',
