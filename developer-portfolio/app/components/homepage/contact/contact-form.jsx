@@ -35,7 +35,7 @@ function ContactForm() {
     const body = encodeURIComponent(
       `Name: ${userInput.name}\nEmail: ${userInput.email}\n\n${userInput.message}`
     );
-    const mailtoLink = `mailto:abusaid7388@gmail.com?subject=${subject}&body=${body}`;
+    const mailtoLink = `mailto:aayanahmedtejani@gmail.com?subject=${subject}&body=${body}`;
 
     window.open(mailtoLink, "_blank");
 
