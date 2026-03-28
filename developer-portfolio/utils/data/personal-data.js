@@ -14,6 +14,7 @@ export const personalData = {
   address: 'Karachi, Pakistan',
   github: 'https://github.com/Aayan-Ahmed-17',
   linkedIn: 'https://www.linkedin.com/in/aayan-ahmed-tejani/',
+  whatsapp: '+92-332-4494925',
   twitter: '',         // leave blank if none
   stackOverflow: '',   // leave blank if none
   leetcode: '',        // leave blank if none
