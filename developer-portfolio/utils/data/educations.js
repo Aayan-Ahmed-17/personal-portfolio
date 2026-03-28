@@ -1,20 +1,25 @@
 export const educations = [
   {
     id: 1,
-    title: "Bachelor Degree",
-    duration: "2020 - Present",
-    institution: "National University of Bangladesh",
+    title: "Bachelor Student (Present)",
+    institution: 'Mohammed Ali Jinnah University (MAJU)',
+    degree: 'Bachelor of Science — Computing & Business',
+    duration: 'SP2025 - FA2028 (Expected)',
+    description:
+      'Currently in 3rd semester. Studying computer science fundamentals ' +
+      'alongside business and management concepts. Complementing academics ' +
+      'with intensive self-directed Python and AI development.',
   },
   {
     id: 2,
-    title: "Higher Secondary Certificate",
-    duration: "2018 - 2020",
-    institution: "Noakhali Islamia Kamil Madrasah",
+    title: "Intermediate Certificate",
+    duration: "2022 - 2024",
+    institution: "Islamia Govt. Science College",
   },
   {
     id: 3,
     title: "Secondary School Certificate",
-    duration: "2008 - 2018",
-    institution: "Baitus Saif Islamia Madrasah",
+    duration: "2022",
+    institution: "The Islamic Public School",
   }
 ]
