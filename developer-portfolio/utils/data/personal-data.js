@@ -10,7 +10,7 @@ export const personalData = {
     "I'm also exploring automation with n8n and studying agentic AI systems." +
     "My long-term goal: build and work on multi-agent AI pipelines.",
   email: 'aayanahmedtejani@gmail.com',
-  phone: '+92-XXX-XXXXXXX',
+  phone: '+92-325-8745877',
   address: 'Karachi, Pakistan',
   github: 'https://github.com/Aayan-Ahmed-17',
   linkedIn: 'https://www.linkedin.com/in/aayan-ahmed-tejani/',
