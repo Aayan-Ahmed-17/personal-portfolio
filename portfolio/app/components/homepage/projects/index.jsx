@@ -1,7 +1,21 @@
+"use client";
+import { useState } from 'react';
 import { projectsData } from '@/utils/data/projects-data';
 import ProjectCard from './project-card';
 
 const Projects = () => {
+  const [activeCategory, setActiveCategory] = useState('all');
+
+  const categories = [
+    { id: 'all', name: 'All' },
+    { id: 'python', name: 'Python' },
+    { id: 'vibe', name: 'Vibe' },
+    { id: 'agentic-ai', name: 'Agentic AI' },
+  ];
+
+  const filteredProjects = activeCategory === 'all'
+    ? projectsData
+    : projectsData.filter(project => project.category === activeCategory);
 
   return (
     <div id='projects' className="relative z-50  my-12 lg:my-24">
@@ -16,8 +30,24 @@ const Projects = () => {
       </div>
 
       <div className="pt-24">
+        {/* Category Tabs */}
+        <div className="flex flex-wrap justify-center gap-3 md:gap-6 mb-12">
+          {categories.map((category) => (
+            <button
+              key={category.id}
+              onClick={() => setActiveCategory(category.id)}
+              className={`px-4 py-2 rounded-full border transition-all duration-300 text-sm md:text-base ${
+                activeCategory === category.id
+                  ? 'bg-[#1a1443] border-[#16f2b3] text-[#16f2b3] shadow-[0_0_20px_rgba(22,242,179,0.3)]'
+                  : 'bg-transparent border-[#1b2c68a0] text-gray-400 hover:border-[#16f2b3] hover:text-[#16f2b3]'
+              }`}
+            >
+              {category.name}
+            </button>
+          ))}
+        </div>
         <div className="flex flex-col gap-6">
-          {projectsData.slice(0, 4).map((project, index) => (
+          {filteredProjects.map((project, index) => (
             <div
               id={`sticky-card-${index + 1}`}
               key={index}

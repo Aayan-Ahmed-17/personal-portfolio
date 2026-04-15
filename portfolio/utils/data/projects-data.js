@@ -44,39 +44,73 @@ export const projectsData = [
         description:
             'A fully asynchronous backend API built with FastAPI and PyMongo. ' +
             'Features CRUD operations, Pydantic request validation, custom error ' +
-            'handling middleware, and auto-generated OpenAPI documentation. ' +
-            'Designed with clean separation of concerns and async-first architecture.',
-        tools: ['FastAPI', 'MongoDB', 'PyMongo', 'Async Python', 'Pydantic', 'Python'],
+            'handling middleware, and auto-generated OpenAPI documentation.',
+        tools: ['FastAPI', 'MongoDB', 'PyMongo', 'Async Python', 'Pydantic'],
         role: 'Backend Developer',
-        code: 'https://github.com/yourusername/your-repo',
+        code: 'https://github.com/Aayan-Ahmed-17/fastapi-mongo-api',
         demo: '',
+        category: 'python'
     },
     {
         id: 2,
         name: 'Web Scraper & Data Extractor',
         description:
-            'A targeted web scraper that extracts, cleans, and structures data ' +
-            'from multi-page websites. Handles pagination, retry logic on failures, ' +
-            'and exports clean structured output. Built with Requests and ' +
-            'BeautifulSoup with decorator-based logging and error handling.',
-        tools: ['Python', 'Requests', 'BeautifulSoup', 'Decorators', 'File I/O'],
+            'A targeted web scraper that extracts and structures data from multi-page websites. ' +
+            'Handles pagination, retry logic, and exports clean structured output.',
+        tools: ['Python', 'Requests', 'BeautifulSoup', 'Decorators'],
         role: 'Developer',
-        code: 'https://github.com/yourusername/your-repo',
+        code: 'https://github.com/Aayan-Ahmed-17/python-scraper',
         demo: '',
+        category: 'python'
     },
     {
         id: 3,
         name: 'Automation Workflow — n8n',
         description:
-            'A no-code/low-code automation workflow built with n8n that connects ' +
-            'multiple services and automates repetitive tasks. Demonstrates ' +
-            'understanding of event-driven architecture, webhook triggers, and ' +
-            'multi-step data transformation pipelines.',
+            'A low-code automation workflow built with n8n that connects REST APIs and ' +
+            'automates multi-step data transformation pipelines.',
         tools: ['n8n', 'Automation', 'Webhooks', 'REST APIs'],
         role: 'Automation Developer',
         code: '',
         demo: '',
+        category: 'vibe'
     },
+    {
+        id: 4,
+        name: 'Autonomous Research Agent',
+        description:
+            'An AI agent capable of multi-step reasoning and independent research. ' +
+            'Utilizes LangChain for tool-calling and autonomous execution logs.',
+        tools: ['OpenAI', 'LangChain', 'Python', 'Agentic AI'],
+        role: 'AI Engineer',
+        code: '',
+        demo: '',
+        category: 'agentic-ai'
+    },
+    {
+        id: 5,
+        name: 'Multi-Agent Pipeline',
+        description:
+            'An experiment in multi-agent orchestration where several AI agents collaborate ' +
+            'to solve complex tasks, demonstrating inter-agent communication.',
+        tools: ['Python', 'CrewAI', 'Agentic AI', 'LangChain'],
+        role: 'AI Developer',
+        code: '',
+        demo: '',
+        category: 'agentic-ai'
+    },
+    {
+        id: 6,
+        name: 'Vibe-Driven UI Component',
+        description:
+            'A rapid UI development experiment using Cursor and vibe-coding principles ' +
+            'to build highly responsive and aesthetically pleasing components.',
+        tools: ['Cursor', 'Next.js', 'Tailwind CSS', 'Vibe Coding'],
+        role: 'Vibe Coder',
+        code: '',
+        demo: '',
+        category: 'vibe'
+    }
 ];
 
 
