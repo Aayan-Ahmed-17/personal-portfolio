@@ -26,7 +26,7 @@
 
 ## Overview
 
-A premium portfolio template built with **Next.js 16**, **React 19**, and **Tailwind CSS 4**. This version is a **pure frontend implementation**, making it extremely easy to deploy to static hosting services like Vercel or Netlify without needing any backend configuration or environment variables.
+A premium portfolio template built with **Next.js 16**, **React 19**, and **Tailwind CSS 4**. This version is a **pure frontend implementation**, making it extremely easy to deploy to static hosting services like Vercel without needing any backend configuration or environment variables.
 
 ---
 
@@ -70,7 +70,7 @@ A premium portfolio template built with **Next.js 16**, **React 19**, and **Tail
 1. **Clone the Repository**
    ```bash
    git clone https://github.com/yourusername/personal-portfolio.git
-   cd developer-portfolio
+   cd portfolio
    ```
 
 2. **Install Dependencies**
@@ -98,10 +98,6 @@ Manage all content through the files in `utils/data/`:
 - `educations.js`: Academic background
 
 ---
-
-## Deployment :rocket:
-
-Since this is a pure frontend project, you can deploy it instantly:
 
 ### Vercel (Recommended)
 1. Push your code to GitHub.
