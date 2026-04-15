@@ -1,11 +1,58 @@
 // @flow strict
 
 import * as React from 'react';
+import Link from 'next/link';
+import { personalData } from '@/utils/data/personal-data';
+import { toast } from 'react-toastify';
+import { FaCode, FaPlay } from 'react-icons/fa';
 
 function ProjectCard({ project }) {
 
+  const handleNoDemo = () => {
+    toast.info("Public deployment is currently unavailable for this project.", {
+      position: "bottom-center",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      theme: "dark",
+    });
+  };
+
   return (
-    <div className="from-[#0d1224] border-[#1b2c68a0] relative rounded-lg border bg-gradient-to-r to-[#0a0d37] w-full">
+    <div className="from-[#0d1224] border-[#1b2c68a0] relative rounded-lg border bg-gradient-to-r to-[#0a0d37] w-full group overflow-hidden">
+      {/* Hover Overlay */}
+      <div className="absolute inset-0 z-10 flex items-center justify-center gap-4 bg-[#0d1224]/80 opacity-0 transition-all duration-300 backdrop-blur-sm group-hover:opacity-100">
+        {project.demo ? (
+          <Link
+            href={project.demo}
+            target="_blank"
+            className="flex items-center gap-2 rounded-full bg-[#16f2b3] px-4 py-2 text-sm font-bold text-[#0d1224] transition-all hover:scale-110"
+          >
+            <FaPlay className="text-xs" />
+            View Project
+          </Link>
+        ) : (
+          <button
+            onClick={handleNoDemo}
+            className="flex items-center gap-2 rounded-full bg-[#16f2b3] px-4 py-2 text-sm font-bold text-[#0d1224] transition-all hover:scale-110"
+          >
+            <FaPlay className="text-xs" />
+            View Project
+          </button>
+        )}
+
+        <Link
+          href={project.code || personalData.github}
+          target="_blank"
+          className="flex items-center gap-2 rounded-full border border-violet-500 bg-transparent px-4 py-2 text-sm font-bold text-white transition-all hover:bg-violet-500/20 hover:scale-110"
+        >
+          <FaCode className="text-xs" />
+          GitHub
+        </Link>
+      </div>
+
       <div className="flex flex-row">
         <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-pink-500 to-violet-600"></div>
         <div className="h-[1px] w-full bg-gradient-to-r from-violet-600 to-transparent"></div>
@@ -68,4 +115,4 @@ function ProjectCard({ project }) {
   );
 };
 
-export default ProjectCard;
+export default ProjectCard;
