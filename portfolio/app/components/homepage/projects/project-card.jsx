@@ -22,37 +22,6 @@ function ProjectCard({ project }) {
 
   return (
     <div className="from-[#0d1224] border-[#1b2c68a0] relative rounded-lg border bg-gradient-to-r to-[#0a0d37] w-full group overflow-hidden">
-      {/* Hover Overlay */}
-      <div className="absolute inset-0 z-10 flex items-center justify-center gap-4 bg-[#0d1224]/80 opacity-0 transition-all duration-300 backdrop-blur-sm group-hover:opacity-100">
-        {project.demo ? (
-          <Link
-            href={project.demo}
-            target="_blank"
-            className="flex items-center gap-2 rounded-full bg-[#16f2b3] px-4 py-2 text-sm font-bold text-[#0d1224] transition-all hover:scale-110"
-          >
-            <FaPlay className="text-xs" />
-            View Project
-          </Link>
-        ) : (
-          <button
-            onClick={handleNoDemo}
-            className="flex items-center gap-2 rounded-full bg-[#16f2b3] px-4 py-2 text-sm font-bold text-[#0d1224] transition-all hover:scale-110"
-          >
-            <FaPlay className="text-xs" />
-            View Project
-          </button>
-        )}
-
-        <Link
-          href={project.code || personalData.github}
-          target="_blank"
-          className="flex items-center gap-2 rounded-full border border-violet-500 bg-transparent px-4 py-2 text-sm font-bold text-white transition-all hover:bg-violet-500/20 hover:scale-110"
-        >
-          <FaCode className="text-xs" />
-          GitHub
-        </Link>
-      </div>
-
       <div className="flex flex-row">
         <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-pink-500 to-violet-600"></div>
         <div className="h-[1px] w-full bg-gradient-to-r from-violet-600 to-transparent"></div>
@@ -67,7 +36,7 @@ function ProjectCard({ project }) {
           {project.name}
         </p>
       </div>
-      <div className="overflow-hidden border-t-[2px] border-indigo-900 px-4 lg:px-8 py-4 lg:py-8">
+      <div className="overflow-hidden border-t-[2px] border-indigo-900 px-4 lg:px-8 py-4 lg:py-8 transition-all duration-300">
         <code className="font-mono text-xs md:text-sm lg:text-base">
           <div className="blink">
             <span className="mr-2 text-pink-500">const</span>
@@ -110,6 +79,37 @@ function ProjectCard({ project }) {
           </div>
           <div><span className="text-gray-400">{`};`}</span></div>
         </code>
+
+        {/* Action Buttons */}
+        <div className="mt-6 flex flex-wrap items-center justify-end gap-3">
+          {project.demo ? (
+            <Link
+              href={project.demo}
+              target="_blank"
+              className="group flex items-center gap-2 rounded-full bg-[#16f2b3] px-3 py-1.5 text-xs font-bold text-[#0d1224] transition-all hover:bg-[#12d19b] sm:px-4 sm:py-2 sm:text-sm"
+            >
+              <FaPlay className="text-[10px] sm:text-xs" />
+              View Project
+            </Link>
+          ) : (
+            <button
+              onClick={handleNoDemo}
+              className="group flex items-center gap-2 rounded-full bg-[#16f2b3] px-3 py-1.5 text-xs font-bold text-[#0d1224] transition-all hover:bg-[#12d19b] sm:px-4 sm:py-2 sm:text-sm"
+            >
+              <FaPlay className="text-[10px] sm:text-xs" />
+              View Project
+            </button>
+          )}
+
+          <Link
+            href={project.code || personalData.github}
+            target="_blank"
+            className="group flex items-center gap-2 rounded-full border border-violet-500 bg-transparent px-3 py-1.5 text-xs font-bold text-white transition-all hover:bg-violet-500/10 sm:px-4 sm:py-2 sm:text-sm"
+          >
+            <FaCode className="text-[10px] sm:text-xs text-violet-400 group-hover:text-white" />
+            GitHub
+          </Link>
+        </div>
       </div>
     </div>
   );
