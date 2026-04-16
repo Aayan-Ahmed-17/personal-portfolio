@@ -40,15 +40,15 @@
 export const projectsData = [
     {
         id: 1,
-        name: 'Async REST API — FastAPI + MongoDB',
+        name: 'Full-stack Web scraping & CRUD blog website',
         description:
             'A fully asynchronous backend API built with FastAPI and PyMongo. ' +
-            'Features CRUD operations, Pydantic request validation, custom error ' +
-            'handling middleware, and auto-generated OpenAPI documentation.',
-        tools: ['FastAPI', 'MongoDB', 'PyMongo', 'Async Python', 'Pydantic'],
+            'Features CRUD operations, Pydantic request validation, error ' +
+            'handling, API Design Architecture, and online scraped articles.',
+        tools: ['FastAPI', 'MongoDB', 'PyMongo', 'Requests', 'Beautiful Soup', "Pydantic", "Async Python"],
         role: 'Backend Developer',
-        code: 'https://github.com/Aayan-Ahmed-17/fastapi-mongo-api',
-        demo: '',
+        code: 'https://github.com/Aayan-Ahmed-17/Personal-Blog-website-Fullstack',
+        demo: 'https://personal-blog-website-fullstack-production.up.railway.app/',
         category: 'python'
     },
     {
